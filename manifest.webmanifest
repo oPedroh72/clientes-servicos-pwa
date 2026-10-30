@@ -1,0 +1,13 @@
+{
+  "name": "Clientes & Serviços Offline",
+  "short_name": "Clientes",
+  "description": "Cadastro local de clientes, endereços, atendimentos e fotos.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f4f7f6",
+  "theme_color": "#173b35",
+  "icons": [{"src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}]
+}

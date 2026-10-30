@@ -1,0 +1,27 @@
+CLIENTES & SERVIÇOS — PACOTE PWA
+
+ARQUIVOS
+- index.html: aplicação
+- manifest.webmanifest: configuração instalável
+- sw.js: cache offline do app shell
+- icon.svg: ícone
+
+INSTALAR NO ANDROID
+1. Publique todos os arquivos desta pasta em uma hospedagem estática com HTTPS. A hospedagem serve apenas os arquivos; o sistema não precisa de backend ou login.
+2. Abra o endereço HTTPS no Chrome do Android e carregue o sistema uma vez com internet.
+3. No menu do Chrome, escolha “Instalar app” ou “Adicionar à tela inicial”.
+4. Abra pela tela inicial. O app shell ficará disponível offline depois do primeiro carregamento.
+
+DADOS E BACKUP
+- Clientes, endereços, atendimentos e fotos são gravados no IndexedDB desta origem/navegador.
+- O armazenamento desta PWA é separado do HTML aberto diretamente. Para transferir dados, exporte um backup JSON em uma versão e importe na outra.
+- Faça backups frequentes e guarde cópias fora do aparelho. Armazenamento persistente não é garantia absoluta contra perda.
+
+MAPA
+- O app shell funciona offline; a cartografia de ruas não. Os blocos são pedidos apenas para a área exibida, sem baixar cidades/áreas em lote.
+- Tiles padrão OpenStreetMap, atribuição visível. Disponibilidade best-effort e sujeita a https://operations.osmfoundation.org/policies/tiles/
+- Não há download de mapas offline. Para isso, use um provedor que autorize explicitamente armazenamento offline ou hospede seus próprios dados cartográficos.
+- CEP pode preencher rua/bairro/cidade/UF via ViaCEP. Coordenadas podem ser digitadas ou capturadas pelo GPS quando estiver no endereço.
+
+IMPORTANTE
+A PWA precisa de HTTPS (ou localhost) para Service Worker. Não abra index.html diretamente para instalar.
